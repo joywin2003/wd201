@@ -1,5 +1,9 @@
 const http = require("http");
 const fs = require("fs");
+const minimist = require("minimist");
+const args = minimist(process.argv.slice(2));
+
+const port = args.port || 5500;
 
 let homeContent = "";
 let projectContent = "";
@@ -45,4 +49,6 @@ http
         break;
     }
   })
-  .listen(5500);
+  .listen(port, () => {
+    console.log(`Server is listening on port ${port}`);
+  });
