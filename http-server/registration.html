@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joywin-capstone-1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-blue-500">
+    <div class="flex">
+      <div
+        class="flex flex-col justify-center items-center bg-white border-2 border-gray-900 shadow-md rounded-lg w-96 m-auto mt-20 p-10 mx-4"
+      >
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">
+          User Registration
+        </h1>
+        <div>
+          <form id="user-form">
+            <label for="name" class="block font-semibold mb-2">Name</label>
+            <input
+              required
+              type="text"
+              id="name"
+              name="name"
+              class="inline-block rounded-lg shadow-md px-4 py-3 mb-5 text-base leading-6 placeholder-gray-500 border border-black"
+              placeholder="Enter full name"
+            />
+
+            <label for="email" class="block font-semibold mb-2">Email</label>
+            <input
+              required
+              type="email"
+              id="email"
+              name="email"
+              class="inline-block rounded-lg shadow-md px-4 py-3 mb-5 text-base leading-6 placeholder-gray-500 border border-black"
+              placeholder="Enter email"
+            />
+
+            <label for="password" class="block font-semibold mb-2"
+              >Password</label
+            >
+            <input
+              required
+              type="password"
+              id="password"
+              name="password"
+              class="inline-block rounded-lg shadow-md px-4 py-3 mb-5 text-base leading-6 placeholder-gray-500 border border-black"
+              placeholder="Enter password"
+            />
+
+            <label for="dob" class="block font-semibold mb-2"
+              >Date of Birth</label
+            >
+            <input
+              required
+              type="date"
+              id="dob"
+              name="dob"
+              class="inline-block rounded-lg shadow-md px-4 py-3 mb-5 text-base leading-6 placeholder-gray-500 border border-black"
+            />
+            <div class="flex items-center justify-center gap-4">
+              <label for="acceptTerms" class="block font-semibold"
+                >Accept Terms & Conditions</label
+              >
+              <input
+                type="checkbox"
+                id="acceptTerms"
+                name="acceptTerms"
+                class="mr-2"
+              />
+            </div>
+
+            <div class="flex justify-center">
+              <button
+                type="submit"
+                class="bg-blue-500 text-white rounded-md px-4 py-2 mt-4"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="flex flex-col justify-center items-center bg-white border-2 border-gray-900 shadow-md rounded-lg m-auto mt-20 p-10 mx-4">
+        <h2 class="text-2xl font-bold text-center text-gray-800 w-full">
+          User Entries
+        </h2>
+        <div class="w-full mt-5 max-h-[31rem] overflow-y-auto">
+          <table class="w-full">
+            <thead>
+              <tr>
+                <th class="border border-gray-900 px-4 py-2">Name</th>
+                <th class="border border-gray-800 px-4 py-2">Email</th>
+                <th class="border border-gray-800 px-4 py-2">Password</th>
+                <th class="border border-gray-800 px-4 py-2">Dob</th>
+                <th class="border border-gray-800 px-4 py-2">Accepted terms?</th>              
+              </tr>
+            </thead>
+            <tbody id="user-entries-table"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
