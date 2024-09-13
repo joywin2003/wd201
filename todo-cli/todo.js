@@ -6,10 +6,8 @@ const todoList = () => {
   const markAsComplete = (index) => {
     all[index].completed = true;
   };
-  const formattedDate = (d) => {
-    return d.toISOString().split("T")[0];
-  };
-  const today = formattedDate(new Date());
+
+  const today = new Date().toISOString().split("T")[0];
   const overdue = () => {
     // Write the date check condition here and return the array
     // of overdue items accordingly.
@@ -19,7 +17,7 @@ const todoList = () => {
   const dueToday = () => {
     // Write the date check condition here and return the array
     // of todo items that are due today accordingly.
-    return all.filter((todo) => todo.dueDate == today);
+    return all.filter((todo) => todo.dueDate === today);
   };
 
   const dueLater = () => {
@@ -35,7 +33,7 @@ const todoList = () => {
     return list
       .map((todo, index) => {
         return `[${todo.completed ? "x" : " "}] ${todo.title} ${
-          todo.dueDate == today ? "" : `${todo.dueDate}`
+          todo.dueDate === today ? "" : `${todo.dueDate}`
         }`;
       })
       .join("\n");
