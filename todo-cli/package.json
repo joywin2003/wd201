@@ -1,0 +1,25 @@
+{
+  "name": "todo-cli",
+  "version": "1.0.0",
+  "main": "todo.js",
+  "scripts": {
+    "test": "jest",
+    "prepare": "cd ..&&husky install todo-cli/.husky"
+  },
+  "keywords": [
+    "todo"
+  ],
+  "author": "Joywin <joywinbennis0987@gmail.com>",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "husky": "^9.1.6",
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "googleapis": "^144.0.0"
+  },
+  "script": {
+    "prepare": "cd ..&&husky install todo-cli/.husky"
+  }
+}
