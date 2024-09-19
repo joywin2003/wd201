@@ -8,8 +8,12 @@ describe("To-Do List", () => {
     all.length = 0;
 
     const today = new Date().toISOString().split("T")[0];
-    const yesterday = new Date(new Date().setDate(new Date().getDate() - 1)).toISOString().split("T")[0];
-    const tomorrow = new Date(new Date().setDate(new Date().getDate() + 1)).toISOString().split("T")[0];
+    const yesterday = new Date(new Date().setDate(new Date().getDate() - 1))
+      .toISOString()
+      .split("T")[0];
+    const tomorrow = new Date(new Date().setDate(new Date().getDate() + 1))
+      .toISOString()
+      .split("T")[0];
 
     add({ title: "Overdue Task", completed: false, dueDate: yesterday });
     add({ title: "Due Today Task", completed: false, dueDate: today });
@@ -42,7 +46,7 @@ describe("To-Do List", () => {
 
   test("Retrieve due today items", () => {
     const dueItems = dueToday();
-    expect(dueItems.length).toBe(2); 
+    expect(dueItems.length).toBe(2);
     expect(dueItems[0].title).toBe("Due Today Task");
     expect(dueItems[1].title).toBe("Completed Task");
   });

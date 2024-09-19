@@ -9,7 +9,6 @@
   "keywords": [
     "todo"
   ],
-
   "author": "Joywin <joywinbennis0987@gmail.com>",
   "license": "ISC",
   "description": "",
@@ -26,9 +25,9 @@
     "googleapis": "^144.0.0"
   },
   "lint-staged": {
-  "*.js": [
-    "eslint",
-    "prettier --write ."
-  ]
-}
+    "*.js": [
+      "eslint",
+      "prettier --write ."
+    ]
+  }
 }
