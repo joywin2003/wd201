@@ -4,7 +4,7 @@
   "main": "todo.js",
   "scripts": {
     "test": "jest",
-    "prepare": "cd ..&&husky install todo-cli/.husky"
+    "prepare": "husky"
   },
   "keywords": [
     "todo"
@@ -18,8 +18,5 @@
   },
   "dependencies": {
     "googleapis": "^144.0.0"
-  },
-  "script": {
-    "prepare": "cd ..&&husky install todo-cli/.husky"
   }
 }
