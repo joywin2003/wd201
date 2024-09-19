@@ -5,6 +5,9 @@ class Todo extends Model {
     static async createNew(todo) {
       return this.create(todo);
     }
+    displayTodo() {
+     return `${this.completed ? "[x]":"[ ]"} ${this.id}, ${this.title} - ${this.dueDate}`;
+    }
 }
 Todo.init(
   {
