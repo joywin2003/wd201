@@ -20,19 +20,19 @@ module.exports = (sequelize, DataTypes) => {
 
       console.log("Overdue");
       var overdues = await this.overdue();
-      var formattedOverdues = overdues.map((todo) => todo.displayableString());
+      var formattedOverdues = overdues.map((todo) => todo.displayableString()).join("\n");  
       console.log(formattedOverdues);
       console.log("\n");
 
       console.log("Due Today");
       var dueToday = await this.dueToday();
-      var formattedDueToday = dueToday.map((todo) => todo.displayableString());
+      var formattedDueToday = dueToday.map((todo) => todo.displayableString()).join("\n");
       console.log(formattedDueToday);
       console.log("\n");
 
       console.log("Due Later");
       var dueLater = await this.dueLater();
-      var formattedDueLater = dueLater.map((todo) => todo.displayableString());
+      var formattedDueLater = dueLater.map((todo) => todo.displayableString()).join("\n");
       console.log(formattedDueLater);
     }
 
@@ -60,7 +60,9 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     static async markAsComplete(id) {
-      all[index].completed = true;
+      const todo = await Todo.findByPk(id);
+      todo.completed = true;
+      return await todo.save();
     }
 
     displayableString() {
