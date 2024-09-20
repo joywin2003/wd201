@@ -1,4 +1,1 @@
 node_modules
- npm install husky --save-dev
- npx husky init
- echo "npm test" > .husky/pre-commit  
