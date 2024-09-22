@@ -2,4 +2,5 @@ http-server/node_modules
 postgres/node_modules
 postgres/node_modules
 todo-express/node_modules
+todo-app/node_modules
 
